@@ -1,0 +1,81 @@
+.noauth {
+  display: flex;
+  align-items: flex-start; /* Вирівнює контейнер зверху */
+  justify-content: center;
+  min-height: calc(100vh - 80px);
+  text-align: center;
+  background-color: #f0f4f8;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 20px; /* Можливо, додати відступ зверху */
+}
+
+
+/* Блок повідомлення */
+.message-container {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+
+/* Стиль заголовка */
+.message-container h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Стиль кнопки */
+.super-duper-button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3);
+}
+
+.super-duper-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 123, 255, 0.4);
+}
+
+.super-duper-button:active {
+  transform: scale(0.98);
+}
+
+/* Стиль для другого речення */
+/* Стиль для заголовка */
+.message-container h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px; /* Зменшено відступ знизу */
+  text-align: center;
+}
+
+/* Стиль для другого речення */
+.message-container p {
+  font-size: 1rem;
+  color: #666; /* Трохи світліший колір, щоб текст виглядав менш акцентованим */
+  margin-top: 0; /* Прибрано верхній відступ */
+  margin-bottom: 20px; /* Відступ перед кнопкою */
+  text-align: center;
+}

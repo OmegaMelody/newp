@@ -1,0 +1,219 @@
+/* ReviewItem.css */
+
+/* Основний контейнер для відгуку */
+.Post, .Post1 {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 20px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    word-wrap: break-word;
+    word-break: break-word;
+    margin-bottom: 20px;
+  }
+  
+  /* Заголовок відгуку */
+  .post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+  
+  /* Ім'я користувача */
+  .userName {
+    color: #007bff;
+  }
+  
+  /* Кнопка меню (⋮) */
+  .menu-container {
+    display: inline-block;
+  }
+  
+  .menu-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .menu-button:hover {
+    border-radius: 5px;
+  }
+  
+  .menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .menu button {
+    background: none;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-align: left;
+    white-space: nowrap;
+  }
+  
+  .menu button:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Рейтинг зірок */
+  .star-rating {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  /* Текст відгуку */
+  .Review {
+    margin-top: 10px;
+    font-size: 16px;
+    text-align: left;
+  }
+  
+  /* Кнопки редагування та збереження */
+  .btnc, .button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .cancelbtnr, .savebtnr, .cancelbtn, .savebtn {
+    padding: 6px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    box-sizing: border-box;
+    text-align: center;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    min-width: 90px;
+  }
+  
+  /* Стилі для кнопок збереження */
+  .savebtnr, .savebtn {
+    color: #ffffff;
+    background-color: #0066cc;
+  }
+  
+  .savebtnr:hover, .savebtn:hover {
+    background-color: #005bb5;
+    transform: translateY(-2px);
+  }
+  
+  /* Стилі для кнопок скасування */
+  .cancelbtnr, .cancelbtn {
+    color: #333;
+    background-color: #e0e0e0;
+  }
+  
+  .cancelbtnr:hover, .cancelbtn:hover {
+    background-color: #c7c7c7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Активний стан для кнопки скасування */
+  .cancelbtnr.active, .cancelbtn.active {
+    background-color: #f5f5f5;
+    color: #000;
+    transform: scale(1.05);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Стилі для лічильників лайків та дизлайків */
+  .reaction-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+  }
+  
+  .like-button, .dislike-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin: 0 5px;
+    font-size: 1.2em;
+    color: #b0b0b0;
+    transition: color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .like-button:hover, .dislike-button:hover {
+    color: #0056b3;
+    transform: scale(1.1);
+  }
+  
+  .like-button.active {
+    color: #0056b3;
+  }
+  
+  .dislike-button.active {
+    color: #d32f2f;
+  }
+  
+  .reaction-count {
+    margin-left: 5px;
+    font-weight: bold;
+    color: #333;
+    font-size: 0.9em;
+  }
+  
+  /* Додаткові стилі для сторінки профілю */
+  .Post1 {
+    text-align: center;
+  }
+  
+  .PostTitle {
+    background-color: #FAFAFA;
+    border-radius: 6px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    color: #2c3e50;
+    font-size: 1.2em;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.05);
+  }
+  
+  .PostTitle:hover {
+    background-color: #f0f0f0;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .post-link {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  .post-link:hover {
+    text-decoration: underline;
+    color: #3498db;
+  }
+  
+  /* Стилі для textarea під час редагування */
+  .form-control {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 400px;
+  }
+  

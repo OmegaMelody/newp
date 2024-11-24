@@ -1,0 +1,32 @@
+.string {
+    border: 1px solid black;
+  }
+  
+  .map-container {
+    border: 1px solid black;
+    height: 100vw; /* Встановлюємо ширину на 100% ширини вікна */
+    width: 100%; /* Заповнює всю ширину */
+    height: 100vh; /* Заповнює весь екран */
+    position: relative;
+  }
+  
+  .root { 
+    padding: 5px;
+    max-width: 700px; 
+    margin: auto; 
+  }
+  
+  .label {
+    /* background-color: salmon; 
+ max-width: 90px;
+    overflow-wrap: break-word;
+    height: 20px;  */
+    margin-bottom: 40px;
+  }
+  @media (max-width: 768px) {
+    .map-container {
+      height: 85vh; /* Залишає місце для верхньої навігації */
+    }
+  }
+ 
+  

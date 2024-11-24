@@ -1,0 +1,27 @@
+
+  
+  .checkboxContainer{
+    margin-top: 10px;
+    display: flex;
+  }
+  .checkbox{
+    margin-left: 6px;
+    margin-top: 2px;
+  }
+  .category {
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.category.selected {
+    font-weight: bold;
+}
+
+.all {
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.all.selected {
+    font-weight: bold;
+}

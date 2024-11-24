@@ -1,0 +1,59 @@
+:focus {
+  outline: none;
+}
+
+.header {
+  background-color: #f5f5f5;
+  height: 3rem;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e0e0e0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.title {
+  margin-left: auto;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.button:active {
+  animation: click-animation 0.3s ease-in-out forwards;
+}
+
+@keyframes click-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

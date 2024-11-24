@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #fff;
+}
+
+.profile-page {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+
+/* 
+.profile-content {
+  padding: 20px 0;
+} */
+
+.profile-photo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.profile-photo-change {
+  background: none;
+  border: none;
+  /* color: #007bff; */
+  cursor: pointer;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+  padding-left: 20px; /* Додаємо відступ зліва для всього блоку */
+}
+
+.profile-info-item {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.profile-info-item label {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 5px;
+  margin-left: -20px; /* Зміщуємо мітку вліво */
+}
+
+.profile-info-item input {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  width: 100%; /* Забезпечуємо повну ширину інпута */
+  box-sizing: border-box;
+  background-color: #fff; /* Встановлюємо білий фон для всіх інпутів */
+}
+
+/* Додаємо медіа-запит для мобільних пристроїв */
+@media (max-width: 600px) {
+  .profile-info {
+    padding-left: 10px; /* Зменшуємо відступ на мобільних */
+  }
+
+  .profile-info-item label {
+    margin-left: -10px; /* Коригуємо зміщення мітки на мобільних */
+  }
+}
+
+
+.profile-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.profile-action-link {
+  /* color: #007bff; */
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.profile-action-link:hover {
+  text-decoration: underline;
+}
+
+/* Header styling to ensure it spans full width */
+
+
+
+
+.back-button,
+.filter-button,
+.profile-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+

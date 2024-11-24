@@ -1,0 +1,47 @@
+.way-list {
+  padding: 0.5rem 1rem;
+  width: 100%;
+  list-style-type: none;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+.PostList {
+  /* background-color: #f5f5f5; */
+}
+
+.post-content {
+  display: flex;
+  align-items: flex-start; /* Вирівнювання елементів по верхній частині */
+}
+
+.image-container {
+  margin-right: 20px; /* Додати відступ між зображенням та заголовком */
+  margin-top: 5px;
+}
+
+.title {
+  margin-left: 4px; /* Додати відступ між зображенням та заголовком */
+  font-weight: bold;
+}
+
+.adresa, .type1 {
+  margin-top: 4px;
+  margin-left: 5px; /* Додати відступ між зображенням та заголовком */
+}
+
+.post-item {
+  margin-bottom: 0; /* Видалити відступ між елементами списку */
+}
+
+.hr {
+  height: 1px; /* Висота горизонтальної лінії */
+  background-color: #ccc; /* Колір горизонтальної лінії */
+  border: none; /* Видалити стандартну рамку */
+  margin: 10px 0; /* Відступи зверху та знизу лінії */
+}
+.post-content {
+  display: flex;
+  align-items: flex-start;
+  cursor: pointer; /* Вказівник при наведенні */
+}

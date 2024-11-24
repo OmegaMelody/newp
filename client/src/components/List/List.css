@@ -1,0 +1,110 @@
+.noData {
+    text-align: center;
+    margin-top: 15%;
+    font-size: 1.2rem;
+}
+
+.noDatared {
+    color: rgb(245, 45, 89);
+}
+
+body.dark-mode .noDatared {
+    color: #ff5c75;
+}
+
+#scrollButton {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #007bff; /* Синій основний колір */
+    color: white; /* Текст білий */
+    border: none;
+    border-radius: 50%; /* Кругла кнопка */
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Легка тінь */
+    transition: transform 0.3s ease, background-color 0.3s ease, opacity 0.3s ease; /* Плавний перехід */
+    opacity: 0; /* Початково невидима */
+    visibility: hidden; /* Схована */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Відображення над усіма елементами */
+    transform: translateY(10px); /* Анімація при появі */
+    margin-bottom: 15px;
+}
+
+#scrollButton.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0); /* Плавна поява */
+}
+
+#scrollButton:active {
+    background-color: #0056b3; /* Темніший синій при кліці */
+    transform: scale(0.95); /* Легке зменшення при натисканні */
+}
+
+#scrollButton:hover {
+    background-color: #0056b3; /* Темніший синій при наведенні */
+}
+
+@media (max-width: 768px) {
+    #scrollButton {
+        width: 50px;
+        height: 50px;
+        bottom: 50px; /* Менше відступу для мобільних */
+        right: 15px;
+    }
+}
+
+
+#scrollButton:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 4px;
+}
+
+.skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s ease infinite;
+    height: 150px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.skeleton-title {
+    width: 70%;
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+.skeleton-content {
+    width: 90%;
+    height: 20px;
+    margin-bottom: 5px;
+}
+
+@keyframes loading {
+    from {
+        background-position: 200% 0;
+    }
+    to {
+        background-position: -200% 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .noData {
+        font-size: 1rem;
+        margin-top: 10%;
+    }
+
+    #scrollButton {
+        width: 50px;
+        height: 50px;
+        bottom: 50px;
+        right: 15px;
+    }
+}

@@ -1,0 +1,35 @@
+.unauthorized-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.unauthorized-box {
+  padding: 32px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  transition: all 0.3s ease-in-out;
+}
+
+.unauthorized-box:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+.lock-icon {
+  font-size: 50px;
+  color: #1976d2;
+  margin-bottom: 10px;
+}
+
+.auth-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #1976d2;
+}
+
+.auth-button:hover {
+  background-color: #115293;
+}
+

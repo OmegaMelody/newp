@@ -1,0 +1,93 @@
+{
+    "categories": {
+        "all": "Alle",
+        "rest": "Erholung",
+        "historical": "Historisch",
+        "eat": "Essen",
+        "museum": "Museum",
+        "forChildren": "Für Kinder",
+        "romantic": "Romantisch",
+        "park": "Park"
+    },
+    "filter": "Filter",
+
+    "UserIsNotAuth": {
+        "UserIsNot": "Sie sind nicht in Ihrem Konto angemeldet. Wenn Sie ein Profil benötigen, wird der Autor es tun",
+        "Log in": "Einloggen"
+    },
+    "LoginPage": {
+        "GoogleL": "Einloggen"
+    },
+    "Review": {
+        "Leave a review": "Hinterlassen Sie eine Bewertung",
+        "Authfor": "Sie sind nicht in Ihrem Konto angemeldet. Um eine Bewertung hinterlassen zu können, loggen Sie sich bitte ein.",
+        "Reviews": "Bewertungen",
+        "Delete": "Löschen",
+        "Save": "Speichern",
+        "Edit": "Bearbeiten",
+        "OneR": "Bewertung:",
+        "There are no reviews": "Es gibt keine Bewertungen.",
+        "Enter a review": "Geben Sie eine Bewertung ein",
+        "SEND": "SENDEN"
+    },
+    "PostDetails": {
+        "Name": "Name:",
+        "Reviews": "Bewertungen",
+        "Adress": "Adresse:",
+        "Number": "Nummer:",
+        "Type": "Typ:",
+        "Description": "Beschreibung:"
+    },
+    "Postbtn": {
+        "Description": "Beschreibung",
+        "Reviews": "Bewertungen"
+    },
+    "ProfilPage": {
+        "Sign out of the account": "Vom Konto abmelden",
+        "Edit account": "Konto bearbeiten",
+        "Your feedback": "Ihr Feedback",
+        "Edit": "Bearbeiten",
+        "Delete": "Löschen",
+        "Cancel": "Abbrechen",
+        "Save": "Speichern",
+        "You havenot": "Sie haben noch kein Feedback hinterlassen."
+    },
+    "PostList": {
+        "Adress": "Adresse:",
+        "Type": "Typ:",
+      "types": {
+    "rest": "Erholung",
+    "historical": "Historisch",
+    "eat": "Essen",
+    "museum": "Museum",
+    "forChildren": "Für Kinder",
+    "romantic": "Romantisch",
+    "park": "Park"
+  }
+    },
+    "Fsearch": {
+        "FFsearch": "Auf Anfrage“ ",
+        "SFsearch": "„Nichts gefunden :D "
+      },
+
+   "SettingsModal": {
+      "Name": "Name ",
+      "Username": "Benutzername ",
+      "Pronouns": "Pronomen ",
+      "Bio": "Bio ",
+      "Links": "Links ",
+      "Switch": "Wechseln Sie zum professionellen Konto ",
+      "Avatar": "Avatar erstellen ",
+      "Personal": "Personal Information Settings"
+
+      
+
+
+      
+},
+
+    "Modal": {
+        "EnterRating": "Bitte wählen Sie eine Bewertung aus."
+      }
+
+}

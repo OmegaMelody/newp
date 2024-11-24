@@ -1,0 +1,27 @@
+{
+    "categories": {
+      "all": "Всі",
+      "rest": "Відпочити",
+      "historical": "Історичні",
+      "eat": "Поїсти",
+      "museum": "Музей",
+      "forChildren": "Для дітей",
+      "romantic": "Романтичні",
+      "park": "Парк"
+    },
+    "filter": "Фільтр",
+    "PostList": {
+      "Adress": "Адреса:",
+      "Type": "Тип:",
+      "types": {
+        "rest": "Відпочити",
+        "historical": "Історичні",
+        "eat": "Поїсти",
+        "museum": "Музей",
+        "forChildren": "Для дітей",
+        "romantic": "Романтичні",
+        "park": "Парк"
+      }
+  }
+
+  }

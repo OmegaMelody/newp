@@ -1,0 +1,101 @@
+{
+    "categories": {
+      "all": "All",
+      "rest": "Rest",
+      "historical": "Historical",
+      "eat": "Eat",
+      "museum": "Museum",
+      "forChildren": "For children",
+      "romantic": "Romantic",
+      "park": "Park"
+    },
+    "filter": "Filter",
+
+    "UserIsNotAuth": {
+      "UserIsNot": "You are not logged into your account. If you need a profile, the author will do it",
+      "Log in": "Log in"
+    },
+    "LoginPage": {
+      "GoogleL": "Log in"
+    },
+    "Review": {
+      "Leave a review": "Leave a review",
+      "Authfor": "You are not logged into your account. To be able to leave a review - log in.",
+      "Reviews": "Reviews",
+      "Delete": "Delete",
+      "Save": "Save",
+      "Edit": "Edit",
+      "OneR": "Review:",
+      "There are no reviews": "There are no reviews.",
+      "Enter a review": "Enter a review",
+      "SEND": "SEND"
+    },
+    "PostDetails": {
+      "Name": "Name",
+      "Reviews": "Reviews",
+      "Adress": "Adress:",
+      "Number": "Number:",
+      "Type": "Type:",
+      "Description": "Description:"
+},
+    "Postbtn": {
+      "Description": "Description",
+      "Reviews": "Reviews"
+      
+    },
+    "ProfilPage": {
+      "Sign out of the account": "Sign out of the account",
+      "Edit account": "Edit account",
+      "Your feedback": "Your feedback",
+      "Edit": "Edit",
+      "Delete": "Delete",
+      "Cancel": "Cancel",
+      "Save": "Save",
+      "You havenot": "You haven't left any feedback yet."
+      
+    },
+
+    "PostList": {
+      "Adress": "Adress:",
+      "Type": "Type:",
+      "types": {
+        "rest": "Rest",
+        "historical": "Historical",
+        "eat": "Eat",
+        "museum": "Museum",
+        "forChildren": "For children",
+        "romantic": "Romantic",
+        "park": "Park"
+      }
+    },
+
+    "Fsearch": {
+      "FFsearch": "Upon request“ ",
+      "SFsearch": " “nothing found :D: "
+
+      
+    },
+
+    "SettingsModal": {
+      "Name": "Name ",
+      "Username": "Username ",
+      "Pronouns": "Pronouns ",
+      "Bio": "Bio ",
+      "Links": "Links ",
+      "Switch": "Switch to Professional Account",
+      "Avatar": "Create Avatar",
+      "Personal": "Einstellungen für persönliche Informationen "
+
+      
+    },
+
+    "Modal": {
+        "EnterRating": "Please select a rating."
+      }
+
+}
+
+
+    
+ 
+  

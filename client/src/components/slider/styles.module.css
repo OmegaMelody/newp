@@ -1,0 +1,9 @@
+.root {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.red{
+    color: rgb(86, 0, 167);
+    font-size:large;
+}

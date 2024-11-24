@@ -1,0 +1,95 @@
+/* ProfilePage.css */
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #fff;
+}
+
+.profile-photo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.profile-name {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btnrd {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.rem-button {
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: #f0f4f8;
+  color: #333;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.rem-button:hover {
+  background-color: #e2e8f0;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.logout-button {
+  color: white;
+  border-radius: 8px;
+  padding: 10px 30px;
+  font-size: 16px;
+  background-color: #fb3d3d;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logout-button:hover {
+  background-color: #ff3333;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  transform: translateY(-3px);
+}
+
+.yr h1 {
+  text-align: center;
+  font-size: 24px;
+}
+
+.noth {
+  text-align: center;
+}
+
+/* ProfilePage.css */
+
+.yreview {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Центрує вміст по горизонталі */
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 400px; /* Або бажана максимальна ширина */
+  width: 100%;
+  margin-top: 10px;
+}
+
+.yr {
+  margin-top: 20px;
+}
+
+/* Інші ваші стилі залишаються без змін */
+
