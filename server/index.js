@@ -40,3 +40,30 @@ app.use((err, req, res, next) => {
 // Server initialization
 const PORT = process.env.PORT || 7888;
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
+
+
+// // Розкоментувати на продакшні
+// app.use(express.static(__dirname));
+// app.use(express.static(path.resolve(__dirname, '..', 'client', 'build')));
+
+// // Розкоментувати на продакшні
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(__dirname, '..', 'client', 'build', 'index.html'));
+// });
+
+// app.listen(PORT, () => {
+//   console.log(`Server running at :${PORT}/`);
+// });
+
+// // Розкоментувати на продакшні
+
+// // Запустити сервер
+// const options = {
+//   key: fs.readFileSync('/etc/letsencrypt/live/.../privkey.pem'),
+//   cert: fs.readFileSync('/etc/letsencrypt/live/.../fullchain.pem')
+// };
+
+// // Розкоментувати на продакшні
+// https.createServer(options, app).listen(443, () => {
+//   console.log('Server running at :443/');
+// });
