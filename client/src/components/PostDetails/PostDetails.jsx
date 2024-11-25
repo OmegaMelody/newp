@@ -60,7 +60,7 @@ function PostDetails() {
 }
 
   return (
-    <div>
+    <div className='root'>
       <Header showInput={false} showBack={true} showFilter={false} showProfil={false} showTitle={true} />
       <div className="content-container">
         <div className="buttons">
@@ -83,7 +83,7 @@ function PostDetails() {
               <img src={post.picture} alt={post.title} className='img' style={{ width: '400px', height: '220px' }} />
             </div>
             <div className='title1'>
-              <div><b>   {t('PostDetails.Name', { defaultValue: 'Назва' })}:</b> {post.title}</div>
+              <div><b>   {t('PostDetails.Name', { defaultValue: 'Назва' })}</b> {post.title}</div>
               <div><b>{t('PostDetails.Adress', { defaultValue: 'Адреса:' })}</b> {post.adresa}</div>
               <div><b>{t('PostDetails.Number', { defaultValue: 'Номер:' })}</b> {post.phone}</div>
               <div><b>{t('PostDetails.Type', { defaultValue: 'Тип:' })}</b> {post.type}</div>
