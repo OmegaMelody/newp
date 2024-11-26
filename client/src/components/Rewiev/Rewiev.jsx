@@ -45,6 +45,8 @@ function Rewiev({ itemsid, isAuthenticated }) {
   const location = useLocation();
   const { activeTab, setActiveTab, customRating, setCustomRating, setRating, currentRating, setCurrentRating} = useContext(SearchContext);
 
+  const startURL = process.env.REACT_APP_API_URL;
+
   const handleTabChange = (tab) => {
     setActiveTab(tab);
     localStorage.setItem('activeTab', tab);
@@ -76,7 +78,7 @@ function Rewiev({ itemsid, isAuthenticated }) {
     };
 
     try {
-      const response = await fetch('http://localhost:7888/api/reviews/reviews', {
+      const response = await fetch(`${startURL}/api/reviews/reviews`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -93,7 +95,7 @@ function Rewiev({ itemsid, isAuthenticated }) {
   };
 
   const getReviews = useCallback(async () => {
-    const response = await fetch('http://localhost:7888/api/reviews/getreviews', {
+    const response = await fetch(`${startURL}/api/reviews/getreviews`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -107,7 +109,7 @@ function Rewiev({ itemsid, isAuthenticated }) {
   
     // Отримуємо реакції після отримання відгуків
     const reviewIds = jsonData.map(review => review.review_id);
-    const reactionsResponse = await fetch('http://localhost:7888/api/reviews/getReactions', {
+    const reactionsResponse = await fetch(`${startURL}/api/reviews/getReactions`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ reviewIds, userId: user?.id }),
@@ -130,7 +132,7 @@ function Rewiev({ itemsid, isAuthenticated }) {
   
 
   const getPostTitle = useCallback(async () => {
-    const response = await fetch('http://localhost:7888/api/post/getPostById', {
+    const response = await fetch(`${startURL}/api/post/getPostById`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -156,7 +158,7 @@ function Rewiev({ itemsid, isAuthenticated }) {
 
   async function handleSaveReview(reviewId, newReview, newRating) {
     try {
-      const response = await fetch('http://localhost:7888/api/reviews/editReview', {
+      const response = await fetch(`${startURL}/api/reviews/editReview`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -189,7 +191,7 @@ function Rewiev({ itemsid, isAuthenticated }) {
 
   const handleDelete = async (reviewId) => {
     try {
-      const response = await fetch(`http://localhost:7888/api/reviews/deleteReview/${reviewId}`, {
+      const response = await fetch(`${startURL}/api/reviews/deleteReview/${reviewId}`, {
         method: 'DELETE',
       });
   
@@ -233,7 +235,7 @@ function Rewiev({ itemsid, isAuthenticated }) {
     try {
       if (userReactions[reviewId] === 1) {
         // Якщо лайк вже встановлено, знімаємо його
-        await fetch('http://localhost:7888/api/reviews/removeReaction', {
+        await fetch(`${startURL}/api/reviews/removeReaction`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ reviewId, userId: user.id }),
@@ -243,7 +245,7 @@ function Rewiev({ itemsid, isAuthenticated }) {
         setLikes((prev) => ({ ...prev, [reviewId]: (prev[reviewId] || 1) - 1 }));
       } else {
         // Якщо лайк не встановлений, додаємо його
-        await fetch('http://localhost:7888/api/reviews/react', {
+        await fetch(`${startURL}/api/reviews/react`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ reviewId, userId: user.id, reactionType: 1 }),
@@ -269,7 +271,7 @@ function Rewiev({ itemsid, isAuthenticated }) {
     try {
       if (userReactions[reviewId] === -1) {
         // Якщо дизлайк вже встановлено, знімаємо його
-        await fetch('http://localhost:7888/api/reviews/removeReaction', {
+        await fetch(`${startURL}/api/reviews/removeReaction`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ reviewId, userId: user.id }),
@@ -279,7 +281,7 @@ function Rewiev({ itemsid, isAuthenticated }) {
         setDislikes((prev) => ({ ...prev, [reviewId]: (prev[reviewId] || 1) - 1 }));
       } else {
         // Якщо дизлайк не встановлений, додаємо його
-        await fetch('http://localhost:7888/api/reviews/react', {
+        await fetch(`${startURL}/api/reviews/react`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ reviewId, userId: user.id, reactionType: -1 }),

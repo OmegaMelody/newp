@@ -14,6 +14,8 @@ const Setttings = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
+  const startURL = process.env.REACT_APP_API_URL;
+
   const { showModal, 
     setShowModal } = useContext(SearchContext);
     
@@ -25,7 +27,7 @@ const Setttings = () => {
 
   const handleLogout = async () => {
     try {
-      await fetch('http://localhost:7888/api/auth/logout', {
+      await fetch(`${startURL}/api/auth/logout`, {
         method: 'GET',
         credentials: 'include',
       });

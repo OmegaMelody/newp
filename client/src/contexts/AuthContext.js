@@ -8,11 +8,13 @@
     const navigate = useNavigate();
     const location = useLocation();
 
+    const startURL = process.env.REACT_APP_API_URL;
+
     useEffect(() => {
       const fetchUser = async () => {
         try {
           const response = await fetch(
-            'http://localhost:7888/auth/user',
+            `${startURL}/auth/user`,
             { credentials: 'include' }
           );
           const responseData = await response.text();

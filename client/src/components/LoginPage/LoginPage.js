@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 
 import { GoogleLoginButton } from 'react-social-login-buttons';
 import './LoginPage.css';
+const startURL = process.env.REACT_APP_API_URL;
 
 const LoginPage = () => {
   const { t, i18n } = useTranslation();
@@ -13,7 +14,7 @@ const LoginPage = () => {
 
   
   const handleGoogleLogin = () => {
-    window.location.href = 'http://localhost:7888/auth/google';
+    window.location.href = `${startURL}/auth/google`;
   };
 
   // Імітація успішної авторизації користувача

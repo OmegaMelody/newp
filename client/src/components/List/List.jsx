@@ -34,11 +34,13 @@ function List() {
         item.title.toLowerCase().includes(searchValue.toLowerCase())
     );
 
+    const startURL = process.env.REACT_APP_API_URL;
+
     const getAll = useCallback(async () => {
         try {
             setLoading(true);
             setError(null); // Очистка попередніх помилок
-            const response = await fetch('http://localhost:7888/api/places/getAllData', {
+            const response = await fetch(`${startURL}/api/places/getAllData`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',

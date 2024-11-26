@@ -25,6 +25,8 @@ const ProfilePage = () => {
   const [newReviewText, setNewReviewText] = useState('');
   const [menuVisible, setMenuVisible] = useState(null);
 
+  const startURL = process.env.REACT_APP_API_URL;
+
   const handleLoginClick = () => {
     localStorage.setItem('redirectPath', location.pathname);
     navigate('/login');
@@ -32,7 +34,7 @@ const ProfilePage = () => {
 
   const handleLogout = async () => {
     try {
-      await fetch('http://localhost:7888/api/auth/logout', {
+      await fetch(`${startURL}/api/auth/logout`, {
         method: 'GET',
         credentials: 'include',
       });
@@ -45,7 +47,7 @@ const ProfilePage = () => {
 
   const getReviews = useCallback(async () => {
     if (user && user.id) {
-      const response = await fetch('http://localhost:7888/api/reviews/getUserReviews', {
+      const response = await fetch(`${startURL}/api/reviews/getUserReviews`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -97,7 +99,7 @@ const ProfilePage = () => {
 
   const handleSaveEdit = async (reviewId) => {
     try {
-      const response = await fetch('http://localhost:7888/api/reviews/editReview', {
+      const response = await fetch(`${startURL}/api/reviews/editReview`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -126,7 +128,7 @@ const ProfilePage = () => {
 
   const handleDelete = async (reviewId) => {
     try {
-      const response = await fetch(`http://localhost:7888/api/reviews/deleteReview/${reviewId}`, {
+      const response = await fetch(`${startURL}/api/reviews/deleteReview/${reviewId}`, {
         method: 'DELETE',
       });
   

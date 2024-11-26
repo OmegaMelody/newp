@@ -18,6 +18,8 @@ const Modal = ({ show, onClose, itemsid, getReviews }) => {
   const { rating, setShowModal, setRating } = useContext(SearchContext);
   const { user } = useContext(AuthContext);
 
+  const startURL = process.env.REACT_APP_API_URL;
+
   if (!show) {
     return null;
   }
@@ -39,7 +41,7 @@ const Modal = ({ show, onClose, itemsid, getReviews }) => {
     };
 
     try {
-      const response = await fetch('http://localhost:7888/api/reviews/reviews', {
+      const response = await fetch(`${startURL}/api/reviews/reviews`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

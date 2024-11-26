@@ -28,12 +28,12 @@
       const [customRating, setCustomRating]= useState(0)
       const [currentRating, setCurrentRating] = useState(0);
 
-      
+      const startURL = process.env.REACT_APP_API_URL;
 
 
       useEffect(() => {
           const fetchData = async () => {
-            const response = await fetch('http://localhost:7888/api/getFilteredCategory2/getFilteredCategory2', {
+            const response = await fetch(`${startURL}/api/getFilteredCategory2/getFilteredCategory2`, {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json'

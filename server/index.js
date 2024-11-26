@@ -9,10 +9,12 @@ const { setupSession, setupPassport, setupAuthRoutes } = require('./auth/googleA
 
 const app = express();
 
+const clientUrl = process.env.CLIENT_URL || 'http://localhost:3000';
+
 // Dynamic CORS settings based on environment
 const corsOptions = process.env.NODE_ENV === 'production'
-  ? { origin: process.env.FRONTEND_URL, credentials: true }
-  : { origin: 'http://localhost:3000', credentials: true };
+  ? { origin: process.env.CLIENT_URL_PROD, credentials: true }
+  : { origin: process.env.CLIENT_URL_DEV, credentials: true };
 
 app.use(cors(corsOptions));
 app.use(json());
