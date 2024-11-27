@@ -34,6 +34,11 @@ function PostDetails() {
     const foundPost = items.find(item => item.id === id);
     setPost(foundPost);
   }, [id, items, setPost]);
+// PostDetails.js
+const handleLoginClick = () => {
+  localStorage.setItem('redirectPath', location.pathname);
+  navigate('/login', { replace: true }); // Використовуємо replace: true
+};
 
   useEffect(() => {
     const savedActiveTab = localStorage.getItem('activeTab');

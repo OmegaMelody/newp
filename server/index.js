@@ -6,6 +6,9 @@ const { OAuth2Client } = require('google-auth-library');
 const cors = require('cors');
 const router = require('./routes/index');
 const { setupSession, setupPassport, setupAuthRoutes } = require('./auth/googleAuth');
+const path = require('path');
+const fs = require('fs');
+const https = require('https');
 
 const app = express();
 

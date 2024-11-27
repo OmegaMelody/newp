@@ -52,8 +52,11 @@ function setupPassport(app) {
       const existingUser = await findOrCreateUser(userData);
       req.session.user = existingUser;
       
-      const clientUrl = process.env.CLIENT_URL || 'http://localhost:3000';
-      res.redirect(`${clientUrl}/login`);
+      const clientUrl = process.env.NODE_ENV === 'production'
+          ? process.env.CLIENT_URL_PROD
+          : process.env.CLIENT_URL_DEV;
+    
+      res.redirect(`${clientUrl}/`);
     }
   );
 }
