@@ -34,11 +34,6 @@ function Header({ showInput, showBack, showFilter, showProfil, showTitle, showIn
             <img src={profileImage} alt="Profile" className="icon" />
           </Link>
         )}
-        {showInst && (
-          <Link to="/settings" className="profile-button" aria-label="Settings">
-            <img src={instImage} alt="Settings" className="icon" />
-          </Link>
-        )}
         {showTitle && post?.title && (
           <h3 className="title">{post.title}</h3>
         )}
