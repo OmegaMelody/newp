@@ -12,7 +12,7 @@
     "filter": "Filter",
 
     "UserIsNotAuth": {
-      "UserIsNot": "You are not logged into your account. If you need a profile, the author will do it",
+      "UserIsNot": "You are not logged into your account. To access your profile, please log in.",
       "Log in": "Log in"
     },
     "LoginPage": {

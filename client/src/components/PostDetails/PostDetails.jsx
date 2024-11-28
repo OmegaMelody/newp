@@ -85,7 +85,13 @@ const handleLoginClick = () => {
         {activeTab === 'description' && (
           <div className="post-details">
             <div>
-              <img src={post.picture} alt={post.title} className='img' style={{ width: '400px', height: '220px' }} />
+              <img src={post.picture} alt={post.title}
+              onError={(e) => {
+                e.target.onerror = null; // запобігає нескінченному циклу
+                e.target.src = 'https://www.agrolet.com.ua/wp-content/uploads/2023/01/404_agrolet_ukraine-scaled.jpg'; // посилання на альтернативну картинку
+                }}
+              
+              className='img'  style={{ width: '400px', height: '220px' }} />
             </div>
             <div className='title1'>
               <div><b>   {t('PostDetails.Name', { defaultValue: 'Назва' })}</b> {post.title}</div>
