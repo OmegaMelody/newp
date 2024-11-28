@@ -64,8 +64,8 @@ app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
 
 // // Запустити сервер
 // const options = {
-//   key: fs.readFileSync('/etc/letsencrypt/live/.../privkey.pem'),
-//   cert: fs.readFileSync('/etc/letsencrypt/live/.../fullchain.pem')
+//   cert: fs.readFileSync('/etc/letsencrypt/live/.../fullchain.pem'),
+//   key: fs.readFileSync('/etc/letsencrypt/live/.../privkey.pem')
 // };
 
 // // Розкоментувати на продакшні
