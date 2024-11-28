@@ -31,17 +31,20 @@ setupAuthRoutes(app);
 // API routes
 app.use('/api', router);
 
+// Error handling middleware
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).json({ error: 'Internal Server Error' });
+});
+
+
 // Закоментувати на продакшні
 // Root route
 app.get('/', (req, res) => {
   res.status(200).json({ message: 'Welcome to the API!', version: '1.0.0' });
 });
 
-// Error handling middleware
-app.use((err, req, res, next) => {
-  console.error(err.stack);
-  res.status(500).json({ error: 'Internal Server Error' });
-});
+
 
 // Закоментувати на продакшні
 // Server initialization
