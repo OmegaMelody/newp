@@ -31,6 +31,7 @@ setupAuthRoutes(app);
 // API routes
 app.use('/api', router);
 
+// Закоментувати на продакшні
 // Root route
 app.get('/', (req, res) => {
   res.status(200).json({ message: 'Welcome to the API!', version: '1.0.0' });
@@ -42,6 +43,7 @@ app.use((err, req, res, next) => {
   res.status(500).json({ error: 'Internal Server Error' });
 });
 
+// Закоментувати на продакшні
 // Server initialization
 const PORT = process.env.PORT || 7888;
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
@@ -51,14 +53,12 @@ app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
 // app.use(express.static(__dirname));
 // app.use(express.static(path.resolve(__dirname, '..', 'client', 'build')));
 
+
 // // Розкоментувати на продакшні
 // app.get('*', (req, res) => {
 //   res.sendFile(path.join(__dirname, '..', 'client', 'build', 'index.html'));
 // });
 
-// app.listen(PORT, () => {
-//   console.log(`Server running at :${PORT}/`);
-// });
 
 // // Розкоментувати на продакшні
 
