@@ -1,9 +1,9 @@
-// ReviewItem.jsx
-
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import StarRating from '../slider/StarRating/StarRating';
 import { FaThumbsUp, FaThumbsDown } from 'react-icons/fa';
+import ReCAPTCHA from 'react-google-recaptcha'; // <--- ІМПОРТ reCAPTCHA
+
 import './ReviewItem.css';
 
 function ReviewItem({
@@ -27,26 +27,62 @@ function ReviewItem({
   isProfilePage,
 }) {
   const [menuVisible, setMenuVisible] = useState(false);
+  const [captchaToken, setCaptchaToken] = useState(''); // <--- Стан для reCAPTCHA токена
+
+  const menuRef = useRef(null); // Додаємо посилання на меню
 
   const toggleMenu = () => {
     setMenuVisible(!menuVisible);
   };
 
+  const closeMenu = () => {
+    setMenuVisible(false);
+  };
+
+  useEffect(() => {
+    const handleOutsideClick = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        closeMenu();
+      }
+    };
+
+    document.addEventListener('mousedown', handleOutsideClick);
+    return () => {
+      document.removeEventListener('mousedown', handleOutsideClick);
+    };
+  }, []);
+
+  
+
   return (
     <div className={isProfilePage ? 'Post1' : 'Post'}>
       <div className="post-header">
-        <div className='userName'><b>{reviewData.user_name}</b></div>
+        <div className="userName">
+          <b>{reviewData.user_name}</b>
+        </div>
         {currentUser && String(currentUser.id) === String(reviewData.user_id) && (
-          <div className="menu-container">
+          <div className="menu-container" ref={menuRef}>
             <div>
-              <button className="menu-button" onClick={toggleMenu}>⋮</button>
+              <button className="menu-button" onClick={toggleMenu}>
+                ⋮
+              </button>
             </div>
             {menuVisible && (
               <div className="menu">
-                <button onClick={() => handleEdit(reviewData.review_id, reviewData.reviews, reviewData.grades)}>
+                <button
+                  onClick={() => {
+                    handleEdit(reviewData.review_id, reviewData.reviews, reviewData.grades);
+                    closeMenu(); // Закриваємо меню
+                  }}
+                >
                   {t('Review.Edit', { defaultValue: 'Редагувати' })}
                 </button>
-                <button onClick={() => handleDelete(reviewData.review_id)}>
+                <button
+                  onClick={() => {
+                    handleDelete(reviewData.review_id);
+                    closeMenu(); // Закриваємо меню
+                  }}
+                >
                   {t('Review.Delete', { defaultValue: 'Видалити' })}
                 </button>
               </div>
@@ -86,7 +122,9 @@ function ReviewItem({
         </>
       ) : (
         <>
-          <div className='Review'><b>{t('Review.OneR', { defaultValue: 'Відгук:' })}</b> {reviewData.reviews}</div>
+          <div className="Review">
+            <b>{t('Review.OneR', { defaultValue: 'Відгук:' })}</b> {reviewData.reviews}
+          </div>
           {!isProfilePage && (
             <div className="reaction-buttons">
               <button

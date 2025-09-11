@@ -10,7 +10,9 @@
       { id: 'museum', type: 'Музей' },
       { id: 'forChildren', type: 'Для дітей' },
       { id: 'romantic', type: 'Романтичні' },
-      { id: 'park', type: 'Парк' }
+      { id: 'park', type: 'Парк' },
+      { id: 'hotel', type: 'Готель' }
+
   ];      const [categories, setCategories] = useState(categoriesData);
       const [cameFromList, setCameFromList] = useState(true);
       const [searchValue, setSearchValue] = useState('');

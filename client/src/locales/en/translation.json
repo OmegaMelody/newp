@@ -7,7 +7,8 @@
       "museum": "Museum",
       "forChildren": "For children",
       "romantic": "Romantic",
-      "park": "Park"
+      "park": "Park",
+      "hotel": "Hotel"
     },
     "filter": "Filter",
 
@@ -65,7 +66,8 @@
         "museum": "Museum",
         "forChildren": "For children",
         "romantic": "Romantic",
-        "park": "Park"
+        "park": "Park",
+        "hotel": "Hotel"
       }
     },
 

@@ -25,7 +25,9 @@ const options = {
       ],
     },
   ],
+  gestureHandling: 'greedy', // Додаємо цю опцію
 };
+
 
 const clusterStyles = [
   {

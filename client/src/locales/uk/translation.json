@@ -7,7 +7,8 @@
       "museum": "Музей",
       "forChildren": "Для дітей",
       "romantic": "Романтичні",
-      "park": "Парк"
+      "park": "Парк",
+    "hotel": "Готель"
     },
     "filter": "Фільтр",
     "PostList": {
@@ -20,7 +21,8 @@
         "museum": "Музей",
         "forChildren": "Для дітей",
         "romantic": "Романтичні",
-        "park": "Парк"
+        "park": "Парк",
+    "hotel": "Готель"
       }
   }
 
