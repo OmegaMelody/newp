@@ -8,7 +8,9 @@
       "forChildren": "For children",
       "romantic": "Romantic",
       "park": "Park",
-      "hotel": "Hotel"
+      "hotel": "Hotel",
+        "clubs": "Clubs",
+        "tafel": "Tafel"
     },
     "filter": "Filter",
 
@@ -67,7 +69,9 @@
         "forChildren": "For children",
         "romantic": "Romantic",
         "park": "Park",
-        "hotel": "Hotel"
+        "hotel": "Hotel",
+        "clubs": "Clubs",
+        "tafel": "Tafel"
       }
     },
 

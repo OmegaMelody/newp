@@ -11,7 +11,11 @@
       { id: 'forChildren', type: 'Для дітей' },
       { id: 'romantic', type: 'Романтичні' },
       { id: 'park', type: 'Парк' },
-      { id: 'hotel', type: 'Готель' }
+      { id: 'hotel', type: 'Готель' },
+      { id: 'clubs', type: 'Клуби' },
+      { id: 'tafel', type: 'Тафель' }
+
+
 
   ];      const [categories, setCategories] = useState(categoriesData);
       const [cameFromList, setCameFromList] = useState(true);

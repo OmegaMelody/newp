@@ -14,22 +14,37 @@ const getreviews = async (req, res) => {
 
 // Вставка відгуків
 const reviews = async (req, res) => {
-  const { rating, review, idMarket, user_name, user_id, post_title, place_name } = req.body.data; // Додайте place_name
-  const values = [idMarket, user_name, rating, review, user_id, post_title, place_name];
-
-  const insertQuery = `
-    INSERT INTO reviews (store_id, user_name, grades, reviews, user_id, post_title, place_name)
-    VALUES ($1, $2, $3, $4, $5, $6, $7)
-    RETURNING *;
-  `;
+  const { rating, review, idMarket, user_name, user_id, post_title, place_name } = req.body.data;
 
   try {
+    // 🔎 Перевіряємо, скільки відгуків користувач вже залишив
+    const check = await pool.query(
+      'SELECT COUNT(*) FROM reviews WHERE store_id = $1 AND user_id = $2',
+      [idMarket, user_id]
+    );
+
+    if (parseInt(check.rows[0].count) >= 2) {
+      return res.status(400).json({ message: "Ви вже залишили максимум 2 відгуки для цього поста" });
+    }
+
+    // ✅ Використовуємо values тільки якщо дозволено вставку
+    const values = [idMarket, user_name, rating, review, user_id, post_title, place_name];
+
+    const insertQuery = `
+      INSERT INTO reviews (store_id, user_name, grades, reviews, user_id, post_title, place_name)
+      VALUES ($1, $2, $3, $4, $5, $6, $7)
+      RETURNING *;
+    `;
+
     const result = await pool.query(insertQuery, values);
     res.json(result.rows);
+
   } catch (error) {
     console.error("Помилка надсилання відгуку:", error);
+    res.status(500).json({ message: "Внутрішня помилка сервера" });
   }
 };
+
 
 const editReview = async (req, res) => {
   const { reviewId, newReview, newRating } = req.body;

@@ -38,6 +38,7 @@ const Modal = ({ show, onClose, itemsid, getReviews }) => {
       idMarket: itemsid,
       user_name: user.name,
       user_id: user.id,
+     
     };
 
     try {

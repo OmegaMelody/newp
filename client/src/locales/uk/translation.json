@@ -8,7 +8,9 @@
       "forChildren": "Для дітей",
       "romantic": "Романтичні",
       "park": "Парк",
-    "hotel": "Готель"
+    "hotel": "Готель",
+      "clubs": "Клуби",
+        "tafel": "Tafel"
     },
     "filter": "Фільтр",
     "PostList": {
@@ -22,7 +24,9 @@
         "forChildren": "Для дітей",
         "romantic": "Романтичні",
         "park": "Парк",
-    "hotel": "Готель"
+        "hotel": "Готель",
+        "clubs": "Клуби",
+        "tafel": "Tafel"
       }
   }
 
