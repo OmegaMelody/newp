@@ -305,18 +305,25 @@ function Rewiev({ itemsid, isAuthenticated }) {
   return (
     <div className="post-review">
       <div className='Users'>
+{isAuthenticated && reviews.filter(r => String(r.user_id) === String(user?.id)).length < 2 ? (
+  <>
+    <h3>{t('Review.Leave a review', { defaultValue: 'Залиште відгук' })}</h3>
+    <div className='slider'>
+      <StarRatingvis onClick={() => setShowModal(true)} />
+    </div>
+  </>
+) : (
+  <div className='ahtung'>
+    {!isAuthenticated && (
+      <>
         <h3>{t('Review.Leave a review', { defaultValue: 'Залиште відгук' })}</h3>
-        {isAuthenticated ? (
-          <>
-            <div className='slider' >
-              <StarRatingvis onClick={() => setShowModal(true)} />
-            </div>
-          </>
-        ) : (
-          <div className='ahtung' onLoginClick={() => setShowModal(true)}>
-            <UserNotAuthorized onLoginClick={handleLoginClick} /> 
-          </div>
-        )}
+        <UserNotAuthorized onLoginClick={handleLoginClick} /> 
+      </>
+    )}
+  </div>
+)}
+
+
         <Modal show={showModal} onClose={() => setShowModal(false)} itemsid={itemsid} getReviews={getReviews} />
         <div className='uop'>
           <h1>{t('Review.Reviews', { defaultValue: 'Відгуки:' })}</h1>
