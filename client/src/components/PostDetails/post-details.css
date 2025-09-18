@@ -155,3 +155,13 @@ h5, h3, h1 {
   margin: 0 auto;
   border-radius: 15px;
 }
+
+.link {
+  color: #007bff;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.link:hover {
+  text-decoration: underline;
+}

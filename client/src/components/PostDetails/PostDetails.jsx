@@ -64,6 +64,25 @@ const handleLoginClick = () => {
     return <div>{t('error.noPost', { defaultValue: 'Пост не знайдено' })}</div>;
 }
 
+const renderSite = () => {
+  if (!post.site) {
+    return t('PostDetails.NoSite', { defaultValue: '—' });
+  }
+
+  const href = post.site.startsWith('http') ? post.site : `https://${post.site}`;
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="link"
+    >
+      {post.site}
+    </a>
+  );
+};
+
+
   return (
     <div className='root'>
       <Header showInput={false} showBack={true} showFilter={false} showProfil={false} showTitle={true} />
@@ -96,7 +115,8 @@ const handleLoginClick = () => {
             <div className='title1'>
               <div><b>   {t('PostDetails.Name', { defaultValue: 'Назва' })}</b> {post.title}</div>
               <div><b>{t('PostDetails.Adress', { defaultValue: 'Адреса:' })}</b> {post.adresa}</div>
-              <div><b>{t('PostDetails.Number', { defaultValue: 'Номер:' })}</b> {post.phone}</div>
+              <div> <b>{t('PostDetails.Site', { defaultValue: 'Сайт:' })}</b> {renderSite()}</div>
+
               <div><b>{t('PostDetails.Type', { defaultValue: 'Тип:' })}</b> {post.type}</div>
               <div><b>{t('PostDetails.Description', { defaultValue: 'Опис:' })}</b> <p>{post.description}</p></div>
               <div>{post.content}</div>
