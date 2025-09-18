@@ -5,6 +5,7 @@ import { SearchContext } from '../../contexts/SearchContext';
 import './List.css';
 import Input from '../input/input';
 import { useTranslation } from 'react-i18next';
+import Filters from '../Filters/Filters';
 
 function List() {
     const { t, i18n } = useTranslation();
@@ -27,9 +28,20 @@ function List() {
     const [showScrollButton, setShowScrollButton] = useState(false);
     const [lastScrollTop, setLastScrollTop] = useState(0);
     const [error, setError] = useState(null); // Додано обробку помилок
+  const [filter, setFilter] = useState(null);
 
     const noData = ':(';
+    
+//   const filteredItems = items
+//     .filter(item => item.title.toLowerCase().includes(searchValue.toLowerCase()))
+//     .filter((item, index) => {
+//       if (filter === 'top3') return index < 3;
+//       if (filter === 'kids') return item.type === 'kids';
+//       if (filter === 'parks') return item.type === 'park';
+//       return true;
+//     });
 
+    
     const filteredItems = items.filter(item =>
         item.title.toLowerCase().includes(searchValue.toLowerCase())
     );
@@ -92,6 +104,7 @@ function List() {
             <Header showInput={true} showFilter={true} cameFromList={cameFromList} />
             <div className='Inp'>
                 <Input />
+                 <Filters onFilter={setFilter} />
             </div>
 
             {loading ? (

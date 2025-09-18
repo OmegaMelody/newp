@@ -52,6 +52,32 @@ function Drawer() {
       className={`overlay ${openDrawer ? 'visible' : ''}`}
       onClick={handleOverlayClick}
     >
+
+      <a
+  href="https://t.me/stuttgart4uk" // заміни на свій паблік/чат
+  target="_blank"
+  rel="noopener noreferrer"
+  className="telegram-fab"
+>
+  <img
+    src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png"
+    alt="Telegram"
+  />
+</a>
+
+<a
+  href="https://www.instagram.com/your_username" // заміни на свій інстаграм
+  target="_blank"
+  rel="noopener noreferrer"
+  className="instagram-fab"
+>
+  <img
+    src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
+    alt="Instagram"
+  />
+</a>
+
+
       <div className={`drawer ${openDrawer ? 'visible' : ''}`}>
         <div className="drawer-header">
           <h1>{t('filter', { defaultValue: 'Фільтр' })}</h1>

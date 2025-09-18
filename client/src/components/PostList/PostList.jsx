@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './PostList.css'; // Імпорт CSS-файлу
 import Input from '../input/input';
+
 import { useTranslation } from 'react-i18next';
 
 function PostList({ title, picture, id, adresa, type }) {

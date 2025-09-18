@@ -97,3 +97,51 @@ x
   margin-left: 6px;
   margin-top: 2px;
 }
+
+.telegram-fab {
+  position: fixed;
+  bottom: 20px;
+  left: 20px; /* 👉 якщо хочеш зліва */
+  /* right: 20px; 👉 якщо хочеш справа */
+
+  width: 55px;
+  height: 55px;
+  background-color: #0088cc; /* синій телеграм */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1100;
+  transition: transform 0.2s ease;
+}
+
+.telegram-fab:hover {
+  transform: scale(1.1);
+}
+
+.telegram-fab img {
+  width: 30px;
+  height: 30px;
+}
+
+
+.instagram-fab {
+  position: fixed;
+  bottom: 90px;
+  left: 20px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  overflow: hidden; /* щоб логотип не вилізав */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1100;
+}
+
+.instagram-fab img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
